@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, send_file
+from flask import Flask, render_template, request
 import smtplib
 import sqlite3
 import os
@@ -73,13 +73,6 @@ def index():
         # Redirect to "hacked" page
         return render_template("hacked.html")
     return render_template('index.html')  
-
-# @app.route("/hacked")
-# def hacked():
-#     # CHANGES START: Added a note about static files
-#     # Ensure that 'hacked.html' correctly links to any CSS or images if used
-#     return render_template("hacked.html")
-#     # CHANGES END
 
 if __name__ == "__main__":
     # Initialize the database on app start
